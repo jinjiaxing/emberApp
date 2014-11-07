@@ -1,0 +1,24 @@
+<h1>{{firstName}}</h1>
+
+<h2>{{lastName}}</h2>
+
+{{#if isLogin}}
+<p>is login</p>
+{{else}}
+<p>no login</p>
+{{/if}}
+
+<ul>
+{{#each p in people}}
+	<li>{{p}}</li>
+{{/each}}
+</ul>
+
+<img {{bind-attr src=bdImg}}>
+
+{{blog-post title=title}}
+
+<button {{action 'testHandler'}}>Test</button>
+
+
+{{outlet}} 
